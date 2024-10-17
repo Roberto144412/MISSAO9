@@ -1,5 +1,5 @@
-import {aleatorio, nome} from './aleatorio.js';
-import {perguntas} from './perguntas.js';
+import { aleatorio, nome } from './aleatorio.js';
+import { perguntas } from './perguntas.js';
 
 const caixaPrincipal = document.querySelector(".caixa-principal");
 const caixaPerguntas = document.querySelector(".caixa-perguntas");
@@ -7,7 +7,6 @@ const caixaAlternativas = document.querySelector(".caixa-alternativas");
 const caixaResultado = document.querySelector(".caixa-resultado");
 const textoResultado = document.querySelector(".texto-resultado");
 const botaoJogarNovamente = document.querySelector(".novamente-btn");
-
 
 let atual = 0;
 let perguntaAtual;
@@ -48,15 +47,15 @@ function mostraResultado() {
     botaoJogarNovamente.addEventListener("click", jogaNovamente);
 }
 
-function jogaNovamente(){
+function jogaNovamente() {
     atual = 0;
     historiaFinal = "";
     caixaResultado.classList.remove("mostrar");
     mostraPergunta();
 }
 
-function substituiNome(){
-    for(constpergunta of perguntas){
+function substituiNome() {
+    for (const pergunta of perguntas) {
         pergunta.enunciado = pergunta.enunciado.replace(/você/g, nome);
     }
 }
