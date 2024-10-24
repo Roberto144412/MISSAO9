@@ -14,12 +14,12 @@ let atual = 0;
 let perguntaAtual;
 let historiaFinal = "";
 
-botaoIniciar.addEventListener('click', iniciajogo);
+botaoIniciar.addEventListener('click', iniciaJogo);
 
 function iniciaJogo() {
     atual = 0;
     historiaFinal = "";
-    telaInicial.computedStyleMap.display = 'none';
+    telaInicial.style.display = 'none';
     caixaPerguntas.classList.remove("mostrar");
     caixaAlternativas.classList.remove("mostrar");
     caixaResultado.classList.remove("mostrar");
